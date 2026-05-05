@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Nightmare King Grimm Damage Calculator</title>
+<meta name="description" content="Calculate damage and hits required for Nightmare King Grimm. Optimize your Hollow Knight build.">
+<meta name="keywords" content="nightmare king grimm calculator, hollow knight grimm guide, grimm hits to kill">
+<link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+<nav class="topnav">
+  <a class="tnav-btn" href="index.html"><span class="ticon">⚔</span> Calculator</a>
+  <a class="tnav-btn" href="radiance-calculator.html"   ><span class="ticon">☀</span> Radiance</a>
+  <a class="tnav-btn" href="grimm-calculator.html"   ><span class="ticon">🔥</span> Grimm</a>
+  <a class="tnav-btn" href="pure-vessel.html"     ><span class="ticon">◈</span> Pure Vessel</a>
+  <a class="tnav-btn" href="watcher.html"          ><span class="ticon">◎</span> Watcher Knights</a>
+  <a class="tnav-btn" href="mantis.html"           ><span class="ticon">⚡</span> Mantis / Traitor</a>
+</nav>
+
+<div class="d" id="page-grimm">
+<div class="bp-inner">
+  <div class="bp-hero" style="background:linear-gradient(135deg,#1a0808 0%,#0f0505 50%,#0a0305 100%);">
+    <div class="bp-hero-content">
+      <div class="bp-tag" style="color:#e07070;">✦ TROUPE MASTER · NIGHTMARE KING</div>
+      <div class="bp-name" style="color:#f0a0a0;text-shadow:0 0 40px rgba(224,100,100,.5);">Troupe Master Grimm</div>
+      <div class="bp-lore">"Master of the Grimm Troupe, a traveling carnival of nightmare. He dances with fire, and every performance ends in ruin — except for him."</div>
+    </div>
+  </div>
+
+  <div class="bp-stats">
+    <div class="bpstat"><div class="bpstat-l">Grimm HP</div><div class="bpstat-v" style="color:var(--danger)">700</div></div>
+    <div class="bpstat"><div class="bpstat-l">NK HP</div><div class="bpstat-v" style="color:var(--danger)">1000</div></div>
+    <div class="bpstat"><div class="bpstat-l">Phases</div><div class="bpstat-v" style="color:var(--gold)">3 / 4</div></div>
+    <div class="bpstat"><div class="bpstat-l">Difficulty</div><div class="bpstat-v" style="color:#f0a0a0">★★★★☆</div></div>
+  </div>
+
+  <div class="bp-cols">
+    <div class="bp-card">
+      <div class="bp-card-title">⚔ Attacks (Both Forms)</div>
+      <div class="atk-list">
+        <div class="atk-item">
+          <div class="atk-name">Flame Bats</div>
+          <div class="atk-desc">Fires 3 homing fire bats that arc toward you. Used frequently in phase 1.</div>
+          <span class="atk-dmg">2 masks</span><span class="atk-tip">Dash through or around them</span>
+        </div>
+        <div class="atk-item">
+          <div class="atk-name">Cape Dive</div>
+          <div class="atk-desc">Grimm leaps into the air and dives down toward you at high speed.</div>
+          <span class="atk-dmg">2 masks</span><span class="atk-tip">Dash away when he rises</span>
+        </div>
+        <div class="atk-item">
+          <div class="atk-name">Fire Pillars</div>
+          <div class="atk-desc">Three pillars of fire erupt from the ground. Spacing and position varies.</div>
+          <span class="atk-dmg">2 masks</span><span class="atk-tip">Watch his hand — stand in the gap</span>
+        </div>
+        <div class="atk-item">
+          <div class="atk-name">Vanishing Dash (NK only)</div>
+          <div class="atk-desc">Nightmare King teleports and reappears dashing across the arena in a fire streak.</div>
+          <span class="atk-dmg">2 masks</span><span class="atk-tip">Pogo or double-jump over him</span>
+        </div>
+        <div class="atk-item">
+          <div class="atk-name">Batswarm (NK Phase 4)</div>
+          <div class="atk-desc">Summons a swarm of fire bats that fill the arena, requiring precise dodging.</div>
+          <span class="atk-dmg">2 masks</span><span class="atk-tip">Hug the wall, make small movements</span>
+        </div>
+      </div>
+    </div>
+    <div class="bp-card">
+      <div class="bp-card-title">💡 Strategy & Tips</div>
+      <div class="tips-list">
+        <div class="tip-item"><div class="tip-num">1</div><div class="tip-text"><strong>Quick Slash</strong> is vital — Grimm's attack windows are short. Hit fast and retreat.</div></div>
+        <div class="tip-item"><div class="tip-num">2</div><div class="tip-text">Learn the <strong>fire pillar tell</strong>: he extends his hand in the direction the gap will be. Stand there.</div></div>
+        <div class="tip-item"><div class="tip-num">3</div><div class="tip-text">Against Nightmare King, <strong>Stalwart Shell</strong> extends your iframes — essential to avoid multi-hit combos.</div></div>
+        <div class="tip-item"><div class="tip-num">4</div><div class="tip-text">During the bat swarm, <strong>stay calm</strong> and use tiny movements. Panicking causes mistakes.</div></div>
+        <div class="tip-item"><div class="tip-num">5</div><div class="tip-text"><strong>Fragile Heart</strong> gives 2 extra masks — the extra HP has saved many runs in his final phase.</div></div>
+        <div class="tip-item"><div class="tip-num">6</div><div class="tip-text">Nightmare King becomes significantly more aggressive below half HP. Maintain composure.</div></div>
+      </div>
+    </div>
+    <div class="bp-card bp-full">
+      <div class="bp-card-title">🔥 Phase Breakdown</div>
+      <table class="phase-table">
+        <tr><th>Phase</th><th>Form</th><th>New Attacks</th><th>Notes</th></tr>
+        <tr><td>Phase 1</td><td>Troupe Master Grimm</td><td class="hp-td">Flame bats, cape dive</td><td>Moderate pace, predictable</td></tr>
+        <tr><td>Phase 2</td><td>Troupe Master Grimm</td><td class="hp-td">Fire pillars added</td><td>More aggressive, shorter windows</td></tr>
+        <tr><td>Phase 3</td><td>Nightmare King Grimm</td><td class="hp-td">Vanishing dash, fire rain</td><td>Completely new moveset, starts fresh</td></tr>
+        <tr><td>Phase 4</td><td>Nightmare King Grimm</td><td class="hp-td">Bat swarm (enrage)</td><td>Below ~40% HP — arena-wide chaos</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+<h1>Nightmare King Grimm Damage Calculator</h1>
+
+<p>
+Nightmare King Grimm is a high-speed boss in 
+:contentReference[oaicite:2]{index=2}.
+</p>
+
+<h2>Boss Health</h2>
+<p>Approximate HP: <strong>1800</strong></p>
+
+<h2>Best Strategy</h2>
+<p>
+Focus on learning attack patterns. Damage windows are short, so high DPS builds are recommended.
+</p>
+</body>
+</html>

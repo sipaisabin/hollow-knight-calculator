@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hollow Knight — Damage Calculator</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+<!-- TOP NAV -->
+<nav class="topnav">
+  <a class="tnav-btn" href="index.html"><span class="ticon">⚔</span> Calculator</a>
+  <a class="tnav-btn" href="radiance-calculator.html"   ><span class="ticon">☀</span> Radiance</a>
+  <a class="tnav-btn" href="grimm-calculator.html"   ><span class="ticon">🔥</span> Grimm</a>
+  <a class="tnav-btn" href="pure-vessel.html"     ><span class="ticon">◈</span> Pure Vessel</a>
+  <a class="tnav-btn" href="watcher.html"          ><span class="ticon">◎</span> Watcher Knights</a>
+  <a class="tnav-btn" href="mantis.html"           ><span class="ticon">⚡</span> Mantis / Traitor</a>
+</nav>
+
+<!-- ══════════════════ BOSS PAGES ══════════════════ -->
+
+<!-- RADIANCE -->
+<div class="boss-page" id="page-radiance">
+<div class="bp-inner">
+  <div class="bp-hero" style="background:linear-gradient(135deg,#2a1800 0%,#1a0e00 50%,#0d0800 100%);">
+    <div class="bp-hero-content">
+      <button class="bp-back" onclick="showPage('home')">← Back to Calculator</button>
+      <div class="bp-tag" style="color:#ffb347;">✦ HIDDEN BOSS · FINAL FORM</div>
+      <div class="bp-name" style="color:#ffcc66;text-shadow:0 0 40px rgba(255,180,50,.5);">The Radiance</div>
+      <div class="bp-lore">"An ancient light, the forgotten dream of moths — she exists only in memory now, yet her power over minds is absolute."</div>
+    </div>
+  </div>
+
+  <div class="bp-stats">
+    <div class="bpstat"><div class="bpstat-l">Total HP</div><div class="bpstat-v" style="color:var(--danger)">1200</div></div>
+    <div class="bpstat"><div class="bpstat-l">Phases</div><div class="bpstat-v" style="color:var(--gold)">1</div></div>
+    <div class="bpstat"><div class="bpstat-l">Location</div><div class="bpstat-v" style="color:var(--text-muted);font-size:.95rem">Dream Realm</div></div>
+    <div class="bpstat"><div class="bpstat-l">Difficulty</div><div class="bpstat-v" style="color:#ffb347">★★★★★</div></div>
+  </div>
+
+  <div class="bp-cols">
+    <div class="bp-card">
+      <div class="bp-card-title">⚔ Attacks</div>
+      <div class="atk-list">
+        <div class="atk-item">
+          <div class="atk-name">Radiant Orbs</div>
+          <div class="atk-desc">Fires 4–6 glowing projectiles in a spread pattern. Appear in two waves.</div>
+          <span class="atk-dmg">2 masks</span><span class="atk-tip">Dash through gaps</span>
+        </div>
+        <div class="atk-item">
+          <div class="atk-name">Spike Pillars</div>
+          <div class="atk-desc">Spikes rise from the floor across the arena in sequence. Lethal if walked into.</div>
+          <span class="atk-dmg">2 masks</span><span class="atk-tip">Jump high, watch timing</span>
+        </div>
+        <div class="atk-item">
+          <div class="atk-name">Sword Rain</div>
+          <div class="atk-desc">Dozens of light swords fall from above, tracking loosely to player position.</div>
+          <span class="atk-dmg">2 masks</span><span class="atk-tip">Keep moving, don't stop</span>
+        </div>
+        <div class="atk-item">
+          <div class="atk-name">Platform Phase</div>
+          <div class="atk-desc">Arena transforms to floating platforms. Beam sweeps across each tier.</div>
+          <span class="atk-dmg">2 masks</span><span class="atk-tip">Stay mobile, use wings</span>
+        </div>
+        <div class="atk-item">
+          <div class="atk-name">Radiant Beam</div>
+          <div class="atk-desc">A slow horizontal beam that sweeps the entire arena when she hovers at sides.</div>
+          <span class="atk-dmg">2 masks</span><span class="atk-tip">Time your jump to pass over</span>
+        </div>
+      </div>
+    </div>
+    <div class="bp-card">
+      <div class="bp-card-title">💡 Strategy & Tips</div>
+      <div class="tips-list">
+        <div class="tip-item"><div class="tip-num">1</div><div class="tip-text">Obtain <strong>Void Heart</strong> — required to trigger this secret ending fight.</div></div>
+        <div class="tip-item"><div class="tip-num">2</div><div class="tip-text"><strong>Quick Slash + Fragile Strength</strong> is the premier damage combo — she's vulnerable the entire fight.</div></div>
+        <div class="tip-item"><div class="tip-num">3</div><div class="tip-text">During the orb phase, <strong>dash through orbs</strong> diagonally rather than away — they curve.</div></div>
+        <div class="tip-item"><div class="tip-num">4</div><div class="tip-text">On the platform phase, prioritize <strong>staying above the beam</strong> over hitting her.</div></div>
+        <div class="tip-item"><div class="tip-num">5</div><div class="tip-text"><strong>Joni's Blessing + Lifeblood Core</strong> gives extra buffer masks — very helpful for the final stretch.</div></div>
+        <div class="tip-item"><div class="tip-num">6</div><div class="tip-text">The opening window after each attack pattern is generous — <strong>3–5 nail hits</strong> are usually safe.</div></div>
+      </div>
+    </div>
+    <div class="bp-card bp-full">
+      <div class="bp-card-title">⚡ Weaknesses & Resistances</div>
+      <div style="color:var(--text-muted);font-size:.85rem;margin-bottom:8px;">Vulnerable to:</div>
+      <div class="badge-row">
+        <span class="badge badge-weak">Nail (full damage)</span>
+        <span class="badge badge-weak">Vengeful Spirit</span>
+        <span class="badge badge-weak">Shade Soul</span>
+        <span class="badge badge-weak">Abyss Shriek</span>
+        <span class="badge badge-weak">Descending Dark</span>
+      </div>
+      <div style="color:var(--text-muted);font-size:.85rem;margin:10px 0 8px;">Notes:</div>
+      <div style="font-size:.85rem;color:var(--text-muted);line-height:1.6;">She is immune during the <strong style="color:var(--text)">platform transition</strong> animation. You cannot stagger her — she has no stagger state. All phases are a single continuous HP bar at 1200 HP. The fight escalates in aggression as her HP drops below 600.</div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- GRIMM (TROUPE MASTER / NIGHTMARE KING) -->
+<div class="boss-page" id="page-grimm">
+<div class="bp-inner">
+  <div class="bp-hero" style="background:linear-gradient(135deg,#1a0808 0%,#0f0505 50%,#0a0305 100%);">
+    <div class="bp-hero-content">
+      <button class="bp-back" onclick="showPage('home')">← Back to Calculator</button>
+      <div class="bp-tag" style="color:#e07070;">✦ TROUPE MASTER · NIGHTMARE KING</div>
+      <div class="bp-name" style="color:#f0a0a0;text-shadow:0 0 40px rgba(224,100,100,.5);">Troupe Master Grimm</div>
+      <div class="bp-lore">"Master of the Grimm Troupe, a traveling carnival of nightmare. He dances with fire, and every performance ends in ruin — except for him."</div>
+    </div>
+  </div>
+
+  <div class="bp-stats">
+    <div class="bpstat"><div class="bpstat-l">Grimm HP</div><div class="bpstat-v" style="color:var(--danger)">700</div></div>
+    <div class="bpstat"><div class="bpstat-l">NK HP</div><div class="bpstat-v" style="color:var(--danger)">1000</div></div>
+    <div class="bpstat"><div class="bpstat-l">Phases</div><div class="bpstat-v" style="color:var(--gold)">3 / 4</div></div>
+    <div class="bpstat"><div class="bpstat-l">Difficulty</div><div class="bpstat-v" style="color:#f0a0a0">★★★★☆</div></div>
+  </div>
+
+  <div class="bp-cols">
+    <div class="bp-card">
+      <div class="bp-card-title">⚔ Attacks (Both Forms)</div>
+      <div class="atk-list">
+        <div class="atk-item">
+          <div class="atk-name">Flame Bats</div>
+          <div class="atk-desc">Fires 3 homing fire bats that arc toward you. Used frequently in phase 1.</div>
+          <span class="atk-dmg">2 masks</span><span class="atk-tip">Dash through or around them</span>
+        </div>
+        <div class="atk-item">
+          <div class="atk-name">Cape Dive</div>
+          <div class="atk-desc">Grimm leaps into the air and dives down toward you at high speed.</div>
+          <span class="atk-dmg">2 masks</span><span class="atk-tip">Dash away when he rises</span>
+        </div>
+        <div class="atk-item">
+          <div class="atk-name">Fire Pillars</div>
+          <div class="atk-desc">Three pillars of fire erupt from the ground. Spacing and position varies.</div>
+          <span class="atk-dmg">2 masks</span><span class="atk-tip">Watch his hand — stand in the gap</span>
+        </div>
+        <div class="atk-item">
+          <div class="atk-name">Vanishing Dash (NK only)</div>
+          <div class="atk-desc">Nightmare King teleports and reappears dashing across the arena in a fire streak.</div>
+          <span class="atk-dmg">2 masks</span><span class="atk-tip">Pogo or double-jump over him</span>
+        </div>
+        <div class="atk-item">
+          <div class="atk-name">Batswarm (NK Phase 4)</div>
+          <div class="atk-desc">Summons a swarm of fire bats that fill the arena, requiring precise dodging.</div>
+          <span class="atk-dmg">2 masks</span><span class="atk-tip">Hug the wall, make small movements</span>
+        </div>
+      </div>
+    </div>
+    <div class="bp-card">
+      <div class="bp-card-title">💡 Strategy & Tips</div>
+      <div class="tips-list">
+        <div class="tip-item"><div class="tip-num">1</div><div class="tip-text"><strong>Quick Slash</strong> is vital — Grimm's attack windows are short. Hit fast and retreat.</div></div>
+        <div class="tip-item"><div class="tip-num">2</div><div class="tip-text">Learn the <strong>fire pillar tell</strong>: he extends his hand in the direction the gap will be. Stand there.</div></div>
+        <div class="tip-item"><div class="tip-num">3</div><div class="tip-text">Against Nightmare King, <strong>Stalwart Shell</strong> extends your iframes — essential to avoid multi-hit combos.</div></div>
+        <div class="tip-item"><div class="tip-num">4</div><div class="tip-text">During the bat swarm, <strong>stay calm</strong> and use tiny movements. Panicking causes mistakes.</div></div>
+        <div class="tip-item"><div class="tip-num">5</div><div class="tip-text"><strong>Fragile Heart</strong> gives 2 extra masks — the extra HP has saved many runs in his final phase.</div></div>
+        <div class="tip-item"><div class="tip-num">6</div><div class="tip-text">Nightmare King becomes significantly more aggressive below half HP. Maintain composure.</div></div>
+      </div>
+    </div>
+    <div class="bp-card bp-full">
+      <div class="bp-card-title">🔥 Phase Breakdown</div>
+      <table class="phase-table">
+        <tr><th>Phase</th><th>Form</th><th>New Attacks</th><th>Notes</th></tr>
+        <tr><td>Phase 1</td><td>Troupe Master Grimm</td><td class="hp-td">Flame bats, cape dive</td><td>Moderate pace, predictable</td></tr>
+        <tr><td>Phase 2</td><td>Troupe Master Grimm</td><td class="hp-td">Fire pillars added</td><td>More aggressive, shorter windows</td></tr>
+        <tr><td>Phase 3</td><td>Nightmare King Grimm</td><td class="hp-td">Vanishing dash, fire rain</td><td>Completely new moveset, starts fresh</td></tr>
+        <tr><td>Phase 4</td><td>Nightmare King Grimm</td><td class="hp-td">Bat swarm (enrage)</td><td>Below ~40% HP — arena-wide chaos</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- PURE VESSEL -->
+<div class="boss-page" id="page-purevessel">
+<div class="bp-inner">
+  <div class="bp-hero" style="background:linear-gradient(135deg,#0a0a18 0%,#060610 50%,#030308 100%);">
+    <div class="bp-hero-content">
+      <button class="bp-back" onclick="showPage('home')">← Back to Calculator</button>
+      <div class="bp-tag" style="color:var(--void);">✦ DREAM BOSS · THE KNIGHT'S TRUE SELF</div>
+      <div class="bp-name" style="color:#c4aaff;text-shadow:0 0 40px rgba(155,110,243,.6);">Pure Vessel</div>
+      <div class="bp-lore">"What the Hollow Knight could have been — the ideal vessel, emptied of will, of thought, of self. A shell perfected. It fights with absolute precision."</div>
+    </div>
+  </div>
+
+  <div class="bp-stats">
+    <div class="bpstat"><div class="bpstat-l">Phase 1 HP</div><div class="bpstat-v" style="color:var(--danger)">800</div></div>
+    <div class="bpstat"><div class="bpstat-l">Phase 2 HP</div><div class="bpstat-v" style="color:var(--danger)">900</div></div>
+    <div class="bpstat"><div class="bpstat-l">Total HP</div><div class="bpstat-v" style="color:var(--gold)">1700</div></div>
+    <div class="bpstat"><div class="bpstat-l">Difficulty</div><div class="bpstat-v" style="color:#c4aaff">★★★★★</div></div>
+  </div>
+
+  <div class="bp-cols">
+    <div class="bp-card">
+      <div class="bp-card-title">⚔ Attacks</div>
+      <div class="atk-list">
+        <div class="atk-item">
+          <div class="atk-name">Nail Combo</div>
+          <div class="atk-desc">2–3 rapid nail slashes, mirroring the player's own attack animations.</div>
+          <span class="atk-dmg">2 masks each</span><span class="atk-tip">Dash through on 2nd hit</span>
+        </div>
+        <div class="atk-item">
+          <div class="atk-name">Void Tendrils</div>
+          <div class="atk-desc">Shoots void projectiles in 3 directions. Used when at range.</div>
+          <span class="atk-dmg">2 masks</span><span class="atk-tip">Dash left-right between streams</span>
+        </div>
+        <div class="atk-item">
+          <div class="atk-name">Focus Slam</div>
+          <div class="atk-desc">Charges a focused energy burst and releases it in a downward explosion.</div>
+          <span class="atk-dmg">2 masks</span><span class="atk-tip">Dash away during charge animation</span>
+        </div>
+        <div class="atk-item">
+          <div class="atk-name">Dash Slash</div>
+          <div class="atk-desc">Dashes across the arena and slashes at the end, covering huge distance instantly.</div>
+          <span class="atk-dmg">2 masks</span><span class="atk-tip">Jump the landing slash</span>
+        </div>
+        <div class="atk-item">
+          <div class="atk-name">Void Pillars (Phase 2)</div>
+          <div class="atk-desc">Void erupts upward from marked floor positions in Phase 2.</div>
+          <span class="atk-dmg">2 masks</span><span class="atk-tip">Watch ground markers, jump early</span>
+        </div>
+      </div>
+    </div>
+    <div class="bp-card">
+      <div class="bp-card-title">💡 Strategy & Tips</div>
+      <div class="tips-list">
+        <div class="tip-item"><div class="tip-num">1</div><div class="tip-text">Pure Vessel is the hardest dream boss. <strong>Muscle memory</strong> is key — practice the patterns repeatedly.</div></div>
+        <div class="tip-item"><div class="tip-num">2</div><div class="tip-text">His nail combo has an exploitable rhythm: <strong>dash through on hit 2</strong>, then counter with 1–2 nail hits.</div></div>
+        <div class="tip-item"><div class="tip-num">3</div><div class="tip-text"><strong>Quick Slash + Fragile Strength</strong> maximises DPS in his short windows. Every hit counts.</div></div>
+        <div class="tip-item"><div class="tip-num">4</div><div class="tip-text">Don't panic-heal in Phase 2 — the void pillars punish standing still. Heal only during long recovery animations.</div></div>
+        <div class="tip-item"><div class="tip-num">5</div><div class="tip-text"><strong>Stalwart Shell</strong> is nearly mandatory here — his combos come fast and extended iframes save lives.</div></div>
+        <div class="tip-item"><div class="tip-num">6</div><div class="tip-text">The focus slam has a <strong>long charge</strong> — use this window aggressively, 3–4 hits are safe.</div></div>
+      </div>
+    </div>
+    <div class="bp-card bp-full">
+      <div class="bp-card-title">◈ Phase Breakdown</div>
+      <table class="phase-table">
+        <tr><th>Phase</th><th>HP</th><th>Key Attacks</th><th>Notes</th></tr>
+        <tr><td>Phase 1</td><td class="hp-td">800 HP</td><td>Nail combo, dash slash, void tendrils, focus slam</td><td>Aggressive but consistent. Learn the rhythm.</td></tr>
+        <tr><td>Phase 2</td><td class="hp-td">900 HP</td><td>All Phase 1 attacks + void pillars from the ground</td><td>Floor becomes dangerous. Stay airborne more.</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- WATCHER KNIGHTS -->
+<div class="boss-page" id="page-watcher">
+<div class="bp-inner">
+  <div class="bp-hero" style="background:linear-gradient(135deg,#0d0d1a 0%,#080810 50%,#050508 100%);">
+    <div class="bp-hero-content">
+      <button class="bp-back" onclick="showPage('home')">← Back to Calculator</button>
+      <div class="bp-tag" style="color:#9b9bcc;">✦ MULTI-ENEMY BOSS · CITY OF TEARS</div>
+      <div class="bp-name" style="color:#b8b8ee;text-shadow:0 0 40px rgba(120,120,220,.4);">Watcher Knights</div>
+      <div class="bp-lore">"Six guardians of the Watcher's Spire, each one a perfect soldier. They fall and rise and fight in unison — silence the last one to end it."</div>
+    </div>
+  </div>
+
+  <div class="bp-stats">
+    <div class="bpstat"><div class="bpstat-l">HP Each</div><div class="bpstat-v" style="color:var(--danger)">250</div></div>
+    <div class="bpstat"><div class="bpstat-l">Count</div><div class="bpstat-v" style="color:var(--gold)">6</div></div>
+    <div class="bpstat"><div class="bpstat-l">Total HP</div><div class="bpstat-v" style="color:var(--danger)">1500</div></div>
+    <div class="bpstat"><div class="bpstat-l">Difficulty</div><div class="bpstat-v" style="color:#b8b8ee">★★★☆☆</div></div>
+  </div>
+
+  <div class="bp-cols">
+    <div class="bp-card">
+      <div class="bp-card-title">⚔ Attacks</div>
+      <div class="atk-list">
+        <div class="atk-item">
+          <div class="atk-name">Rolling Attack</div>
+          <div class="atk-desc">Curls into a ball and rolls across the arena at speed. Can bounce off walls.</div>
+          <span class="atk-dmg">2 masks</span><span class="atk-tip">Jump over with good timing</span>
+        </div>
+        <div class="atk-item">
+          <div class="atk-name">Leaping Slam</div>
+          <div class="atk-desc">Leaps into the air and crashes down toward the player with its nail raised.</div>
+          <span class="atk-dmg">2 masks</span><span class="atk-tip">Dash sideways as it descends</span>
+        </div>
+        <div class="atk-item">
+          <div class="atk-name">Nail Swipe</div>
+          <div class="atk-desc">A quick horizontal nail slash when in close range. Low windup.</div>
+          <span class="atk-dmg">2 masks</span><span class="atk-tip">Keep distance or dash through</span>
+        </div>
+        <div class="atk-item">
+          <div class="atk-name">Multi-Knight Chaos</div>
+          <div class="atk-desc">Multiple knights active at once all attacking simultaneously — the true danger.</div>
+          <span class="atk-dmg">2 masks</span><span class="atk-tip">Focus one, stay mobile</span>
+        </div>
+      </div>
+    </div>
+    <div class="bp-card">
+      <div class="bp-card-title">💡 Strategy & Tips</div>
+      <div class="tips-list">
+        <div class="tip-item"><div class="tip-num">1</div><div class="tip-text"><strong>Kill them one at a time.</strong> Focus all damage on one knight — never split hits between two.</div></div>
+        <div class="tip-item"><div class="tip-num">2</div><div class="tip-text">They spawn 2 at a time (2 → 2 → 2). When a pair is down, you get a brief reset window before the next two.</div></div>
+        <div class="tip-item"><div class="tip-num">3</div><div class="tip-text"><strong>Pogo on rolling knights</strong> — bouncing off them while they roll deals damage safely and keeps you airborne.</div></div>
+        <div class="tip-item"><div class="tip-num">4</div><div class="tip-text"><strong>Descending Dark</strong> is exceptional here — AoE damage hits multiple knights when they cluster.</div></div>
+        <div class="tip-item"><div class="tip-num">5</div><div class="tip-text">The <strong>arena is large</strong> — use vertical space. Watcher Knights are bad at tracking aerial movement.</div></div>
+        <div class="tip-item"><div class="tip-num">6</div><div class="tip-text"><strong>Baldur Shell</strong> is useful — the 4 free block charges absorb the unexpected hits you get when outnumbered.</div></div>
+      </div>
+    </div>
+    <div class="bp-card bp-full">
+      <div class="bp-card-title">◎ Spawn Order</div>
+      <table class="phase-table">
+        <tr><th>Wave</th><th>Knights Active</th><th>Strategy</th></tr>
+        <tr><td>Wave 1</td><td>Knights 1 & 2</td><td>Learn their individual patterns. Practice killing one cleanly.</td></tr>
+        <tr><td>Wave 2</td><td>Knights 3 & 4</td><td>More aggressive — they coordinate attacks. Maintain distance.</td></tr>
+        <tr><td>Wave 3</td><td>Knights 5 & 6</td><td>Final pair. If you reach here with HP, you've won. Push hard.</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- MANTIS LORDS / TRAITOR LORD -->
+<div class="boss-page" id="page-mantis">
+<div class="bp-inner">
+  <div class="bp-hero" style="background:linear-gradient(135deg,#0a1a0a 0%,#061006 50%,#030803 100%);">
+    <div class="bp-hero-content">
+      <div class="bp-tag" style="color:var(--green);">✦ MANTIS VILLAGE · QUEEN'S GARDENS</div>
+      <div class="bp-name" style="color:#a0e8a0;text-shadow:0 0 40px rgba(110,201,122,.4);">Mantis Lords & Traitor Lord</div>
+      <div class="bp-lore">"Three noble sisters, warriors of the Mantis tribe — proud, precise, and merciless. The Traitor Lord betrayed his own kin and now fights in fury."</div>
+    </div>
+  </div>
+
+  <!-- Tab toggle for Mantis vs Traitor -->
+  <div style="display:flex;gap:8px;margin-bottom:1.2rem;">
+    <button id="mtab-mantis" class="tab on" style="font-size:.72rem;padding:7px 20px;" onclick="switchMantisTab('mantis')">⚡ Mantis Lords</button>
+    <button id="mtab-traitor" class="tab" style="font-size:.72rem;padding:7px 20px;" onclick="switchMantisTab('traitor')">🗡 Traitor Lord</button>
+  </div>
+
+  <!-- MANTIS LORDS content -->
+  <div id="mc-mantis">
+    <div class="bp-stats">
+      <div class="bpstat"><div class="bpstat-l">HP Each</div><div class="bpstat-v" style="color:var(--danger)">250</div></div>
+      <div class="bpstat"><div class="bpstat-l">Lords</div><div class="bpstat-v" style="color:var(--gold)">3</div></div>
+      <div class="bpstat"><div class="bpstat-l">Total HP</div><div class="bpstat-v" style="color:var(--danger)">750</div></div>
+      <div class="bpstat"><div class="bpstat-l">Difficulty</div><div class="bpstat-v" style="color:#a0e8a0">★★★☆☆</div></div>
+    </div>
+    <div class="bp-cols">
+      <div class="bp-card">
+        <div class="bp-card-title">⚔ Attacks</div>
+        <div class="atk-list">
+          <div class="atk-item">
+            <div class="atk-name">Sickle Throw</div>
+            <div class="atk-desc">Throws a boomerang sickle that travels horizontally and returns. Very common.</div>
+            <span class="atk-dmg">2 masks</span><span class="atk-tip">Jump over both passes</span>
+          </div>
+          <div class="atk-item">
+            <div class="atk-name">Dive Kick</div>
+            <div class="atk-desc">Leaps up and kicks diagonally downward at high speed toward the player.</div>
+            <span class="atk-dmg">2 masks</span><span class="atk-tip">Dash under them as they kick</span>
+          </div>
+          <div class="atk-item">
+            <div class="atk-name">Dash Slash</div>
+            <div class="atk-desc">Dashes across the floor with a quick nail slash. Short range, low recovery.</div>
+            <span class="atk-dmg">2 masks</span><span class="atk-tip">Jump over or dash through</span>
+          </div>
+          <div class="atk-item">
+            <div class="atk-name">Triple Sickle (Phase 3)</div>
+            <div class="atk-desc">All three lords throw sickles simultaneously from different positions.</div>
+            <span class="atk-dmg">2 masks</span><span class="atk-tip">Find the vertical gap, stay there</span>
+          </div>
+        </div>
+      </div>
+      <div class="bp-card">
+        <div class="bp-card-title">💡 Mantis Lords Tips</div>
+        <div class="tips-list">
+          <div class="tip-item"><div class="tip-num">1</div><div class="tip-text">Phase 1 (1 lord) is a tutorial. Learn the sickle timing before Phase 3 arrives.</div></div>
+          <div class="tip-item"><div class="tip-num">2</div><div class="tip-text">The <strong>sickle boomerangs twice</strong> — jump once when thrown, again when it returns.</div></div>
+          <div class="tip-item"><div class="tip-num">3</div><div class="tip-text">Phase 3 (all 3 lords): focus the <strong>center lord</strong> first to reduce sickle density.</div></div>
+          <div class="tip-item"><div class="tip-num">4</div><div class="tip-text"><strong>Descending Dark</strong> can hit all 3 lords if they're close — spike the middle when clustered.</div></div>
+          <div class="tip-item"><div class="tip-num">5</div><div class="tip-text">Beat them fairly to earn the <strong>Mantis village shortcut</strong> — extremely useful for exploration.</div></div>
+        </div>
+      </div>
+      <div class="bp-card bp-full">
+        <div class="bp-card-title">⚡ Phase Breakdown</div>
+        <table class="phase-table">
+          <tr><th>Phase</th><th>Lords</th><th>HP</th><th>Notes</th></tr>
+          <tr><td>Phase 1</td><td>Lord 1 alone</td><td class="hp-td">250</td><td>1v1, learn sickle rhythm here</td></tr>
+          <tr><td>Phase 2</td><td>Lords 1 & 2</td><td class="hp-td">250 each</td><td>Synchronized attacks — prioritize the damaged one</td></tr>
+          <tr><td>Phase 3</td><td>All 3 Lords</td><td class="hp-td">250 each</td><td>Triple sickles, chaos — vertical positioning is key</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRAITOR LORD content -->
+  <div id="mc-traitor" style="display:none;">
+    <div class="bp-stats">
+      <div class="bpstat"><div class="bpstat-l">Total HP</div><div class="bpstat-v" style="color:var(--danger)">900</div></div>
+      <div class="bpstat"><div class="bpstat-l">Phases</div><div class="bpstat-v" style="color:var(--gold)">1</div></div>
+      <div class="bpstat"><div class="bpstat-l">Location</div><div class="bpstat-v" style="color:var(--text-muted);font-size:.85rem">Queen's Gardens</div></div>
+      <div class="bpstat"><div class="bpstat-l">Difficulty</div><div class="bpstat-v" style="color:#a0e8a0">★★★★☆</div></div>
+    </div>
+    <div class="bp-cols">
+      <div class="bp-card">
+        <div class="bp-card-title">⚔ Attacks</div>
+        <div class="atk-list">
+          <div class="atk-item">
+            <div class="atk-name">Infected Sickle</div>
+            <div class="atk-desc">Like Mantis Lords' sickle but coated in orange infection — more erratic trajectory.</div>
+            <span class="atk-dmg">2 masks</span><span class="atk-tip">Jump higher — trajectory curves</span>
+          </div>
+          <div class="atk-item">
+            <div class="atk-name">Dive Slash Combo</div>
+            <div class="atk-desc">Dives with a slash then immediately follows with a ground dash slash. Two-part.</div>
+            <span class="atk-dmg">2 masks each</span><span class="atk-tip">Dash both times, stay mobile</span>
+          </div>
+          <div class="atk-item">
+            <div class="atk-name">Infection Burst</div>
+            <div class="atk-desc">Slams the ground to create orange infection pools that linger on the floor.</div>
+            <span class="atk-dmg">2 masks</span><span class="atk-tip">Avoid infection pools — use walls</span>
+          </div>
+          <div class="atk-item">
+            <div class="atk-name">Rage Mode</div>
+            <div class="atk-desc">Below ~50% HP he becomes faster and attacks more aggressively with less recovery.</div>
+            <span class="atk-dmg">2 masks</span><span class="atk-tip">Burst him — don't let him linger</span>
+          </div>
+        </div>
+      </div>
+      <div class="bp-card">
+        <div class="bp-card-title">💡 Traitor Lord Tips</div>
+        <div class="tips-list">
+          <div class="tip-item"><div class="tip-num">1</div><div class="tip-text">The <strong>Mantis Claw</strong> wall-jump ability is nearly required — the arena has no floor-safe zones in rage mode.</div></div>
+          <div class="tip-item"><div class="tip-num">2</div><div class="tip-text">His sickle curves more than Mantis Lords' — <strong>jump earlier and higher</strong>.</div></div>
+          <div class="tip-item"><div class="tip-num">3</div><div class="tip-text">The infection pools shrink the arena significantly. <strong>Kill him fast</strong> before you run out of space.</div></div>
+          <div class="tip-item"><div class="tip-num">4</div><div class="tip-text"><strong>Fragile Strength + Quick Slash</strong> lets you burst him in his recovery windows before rage mode starts.</div></div>
+          <div class="tip-item"><div class="tip-num">5</div><div class="tip-text">Equip <strong>Isma's Tear</strong> — it lets you move through infection without taking damage, changing the fight completely.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="app">
+
+<!-- HEADER -->
+<div class="hdr">
+  <svg class="hdr-bug" viewBox="0 0 64 64" fill="none">
+    <ellipse cx="32" cy="38" rx="12" ry="16" fill="#2a2040" stroke="#9b6ef3" stroke-width=".8"/>
+    <circle cx="32" cy="22" r="10" fill="#1a1030" stroke="#c4aaff" stroke-width=".8"/>
+    <circle cx="27" cy="20" r="3" fill="#e8e2f5"/><circle cx="37" cy="20" r="3" fill="#e8e2f5"/>
+    <circle cx="27" cy="20" r="1.5" fill="#0d0d0f"/><circle cx="37" cy="20" r="1.5" fill="#0d0d0f"/>
+    <circle cx="27.6" cy="19.3" r=".6" fill="#c4aaff" opacity=".7"/>
+    <circle cx="37.6" cy="19.3" r=".6" fill="#c4aaff" opacity=".7"/>
+    <path d="M32 13 L26 5M32 13 L38 5" stroke="#8a8099" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M20 30 L7 23M44 30 L57 23M20 36 L5 36M44 36 L59 36M20 42 L8 50M44 42 L56 50" stroke="#4a4460" stroke-width="1" stroke-linecap="round"/>
+  </svg>
+  <h1>Damage Calculator</h1>
+  <p>Hollow Knight · Nail &amp; Spell</p>
+  <div class="hdr-line"></div>
+</div>
+
+<!-- SELECTORS -->
+<div class="g2">
+  <div class="panel">
+    <div class="plabel">Nail Upgrade</div>
+    <select id="nail-sel">
+      <option value="5">Old Nail — 5 dmg</option>
+      <option value="9">Sharpened Nail — 9 dmg</option>
+      <option value="13">Channelled Nail — 13 dmg</option>
+      <option value="17">Coiled Nail — 17 dmg</option>
+      <option value="21" selected>Pure Nail — 21 dmg</option>
+    </select>
+  </div>
+  <div class="panel">
+    <div class="plabel">Boss</div>
+    <select id="boss-sel"></select>
+    <div class="hp-line" id="hp-line"></div>
+  </div>
+</div>
+
+<!-- CHARMS -->
+<div class="panel full" style="margin-bottom:1rem">
+  <div class="plabel">Charms</div>
+  <div class="tabs" id="tabs">
+    <button class="tab on" data-cat="all">All</button>
+    <button class="tab" data-cat="nail">⚔ Nail</button>
+    <button class="tab" data-cat="spell">✦ Spell</button>
+    <button class="tab" data-cat="soul">◈ Soul</button>
+    <button class="tab" data-cat="survival">❤ Survival</button>
+    <button class="tab" data-cat="other">◆ Other</button>
+  </div>
+  <div id="cpages"></div>
+  <div class="nrow">
+    <div class="npips" id="npips"></div>
+    <div class="nc-lbl" id="nc-lbl">0 / 11</div>
+  </div>
+  <div id="nwarn"></div>
+</div>
+
+<!-- RESULTS -->
+<div class="rpanel full">
+  <div class="rtop">
+    <div>
+      <div class="rb-lbl">Nail hits to kill</div>
+      <div class="rbig nclr" id="r-nail">—</div>
+      <div class="runit" id="r-nail-sub">hits</div>
+    </div>
+    <div>
+      <div class="rb-lbl">Spell hits to kill</div>
+      <div class="rbig sclr" id="r-spell">—</div>
+      <div class="runit" id="r-spell-sub">Vengeful Spirit</div>
+    </div>
+  </div>
+  <div class="srow">
+    <div class="sb"><div class="sb-l">Base nail</div><div class="sb-v sv-n" id="s-nail">21</div></div>
+    <div class="sb"><div class="sb-l">Multiplier</div><div class="sb-v sv-b" id="s-mult">×1.00</div></div>
+    <div class="sb"><div class="sb-l">Per hit</div><div class="sb-v sv-t" id="s-total">21</div></div>
+    <div class="sb"><div class="sb-l">Boss HP</div><div class="sb-v sv-s" id="s-hp">—</div></div>
+  </div>
+  <div class="divider"></div>
+  <div class="sec-lbl" id="phase-lbl" style="display:none">Phase breakdown</div>
+  <div class="prows" id="prows"></div>
+  <div class="divider"></div>
+  <div class="sec-lbl">Spell damage reference</div>
+  <div class="sgrid" id="sgrid"></div>
+  <div id="fury-el"></div>
+</div>
+
+<!-- COMBO CALCULATOR -->
+<div class="combo-panel full" id="combo-section">
+  <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:.3rem;">
+    <div class="combo-title">✦ Spell + Nail Combo Calculator</div>
+    <button class="combo-reset" id="combo-reset-btn">↺ Reset</button>
+  </div>
+  <div class="combo-subtitle">Pick your spell, toggle its charms, set how many casts — see the nail hits needed to finish.</div>
+
+  <div class="spell-cards" id="spell-cards"></div>
+
+  <div class="combo-divider"></div>
+  <div class="combo-result">
+    <div class="cr-box">
+      <div class="cr-lbl">Spell Damage</div>
+      <div class="cr-val cv-soul" id="cb-spelldmg">0</div>
+      <div class="cr-sub" id="cb-spelldmg-sub">no spells cast</div>
+    </div>
+    <div class="cr-box">
+      <div class="cr-lbl">Nail Hits Needed</div>
+      <div class="cr-val cv-nail" id="cb-nailhits">—</div>
+      <div class="cr-sub" id="cb-nailhits-sub">after spells land</div>
+    </div>
+    <div class="cr-box">
+      <div class="cr-lbl">Total Actions</div>
+      <div class="cr-val cv-total" id="cb-total">—</div>
+      <div class="cr-sub" id="cb-total-sub">spells + nail hits</div>
+    </div>
+  </div>
+  <div class="combo-bar">
+    <div class="cbar-lbl">
+      <span id="cb-bar-spell-lbl" style="color:var(--soul)">Spell: 0 dmg (0%)</span>
+      <span id="cb-bar-nail-lbl" style="color:var(--nail)">Nail: 0 dmg (0%)</span>
+    </div>
+    <div class="cbar-track">
+      <div class="cbar-spell" id="cb-bar-spell" style="width:0%"></div>
+      <div class="cbar-nail" id="cb-bar-nail" style="width:0%"></div>
+    </div>
+  </div>
+  <div id="combo-note"></div>
+</div>
+
+</div>
+<script>
+const BOSSES=[
+  {name:"Absolute Radiance",hp:[800,800,800,800],phases:["Phase 1","Phase 2","Phase 3","Phase 4"]},
+  {name:"Brooding Mawlek",hp:450},
+  {name:"Broken Vessel",hp:600},
+  {name:"Brothers Oro & Mato",hp:[400,400],phases:["Nailmaster Oro","Nailmaster Mato"]},
+  {name:"Collector (The)",hp:600},
+  {name:"Crystal Guardian",hp:[400,500],phases:["Phase 1","Enraged"]},
+  {name:"Dung Defender",hp:700},
+  {name:"Elder Hu",hp:300},
+  {name:"Enraged Guardian",hp:500},
+  {name:"Failed Champion",hp:[600,800],phases:["Phase 1","Phase 2"]},
+  {name:"False Knight",hp:300},
+  {name:"Flukemarm",hp:400},
+  {name:"Galien",hp:500},
+  {name:"God Tamer",hp:400},
+  {name:"Gorb",hp:200},
+  {name:"Great Nailsage Sly",hp:1200},
+  {name:"Grey Prince Zote",hp:[100,200,300,400,500,600,700,800,900,1000],phases:["Rnd 1","Rnd 2","Rnd 3","Rnd 4","Rnd 5","Rnd 6","Rnd 7","Rnd 8","Rnd 9","Rnd 10"]},
+  {name:"Grimm (Nightmare King)",hp:1000},
+  {name:"Grimm (Troupe Master)",hp:700},
+  {name:"Gruz Mother",hp:400},
+  {name:"Hive Knight",hp:800},
+  {name:"Hollow Knight",hp:[1000,800],phases:["Phase 1","Phase 2"]},
+  {name:"Hornet (Crossroads)",hp:150},
+  {name:"Hornet (Kingdom's Edge)",hp:550},
+  {name:"Lost Kin",hp:[800,1000],phases:["Phase 1","Phase 2"]},
+  {name:"Mantis Lords",hp:[250,250,250],phases:["Lord 1","Lord 2","Lord 3"]},
+  {name:"Markoth",hp:350},
+  {name:"Marmu",hp:150},
+  {name:"Massive Moss Charger",hp:200},
+  {name:"No Eyes",hp:300},
+  {name:"Nosk",hp:700},
+  {name:"Oblobble",hp:[350,350],phases:["Oblobble 1","Oblobble 2"]},
+  {name:"Paintmaster Sheo",hp:900},
+  {name:"Pure Vessel",hp:[800,900],phases:["Phase 1","Phase 2"]},
+  {name:"Radiance",hp:1200},
+  {name:"Sisters of Battle",hp:[250,250,250],phases:["Sister 1","Sister 2","Sister 3"]},
+  {name:"Soul Master",hp:[350,400],phases:["Phase 1","Phase 2"]},
+  {name:"Soul Tyrant",hp:[350,400],phases:["Phase 1","Phase 2"]},
+  {name:"Traitor Lord",hp:900},
+  {name:"Uumuu",hp:200},
+  {name:"Vengefly King",hp:200},
+  {name:"Watcher Knights",hp:[250,250,250,250,250,250],phases:["Knight 1","Knight 2","Knight 3","Knight 4","Knight 5","Knight 6"]},
+  {name:"White Defender",hp:[700,900],phases:["Phase 1","Phase 2"]},
+  {name:"Winged Nosk",hp:800},
+  {name:"Xero",hp:300},
+  {name:"Zote (Vengefly King)",hp:200},
+];
+
+const SPELLS=[
+  {name:"Vengeful Spirit",dmg:15,upgName:"Shade Soul",upgDmg:20},
+  {name:"Desolate Dive",dmg:15,upgName:"Descending Dark",upgDmg:20},
+  {name:"Howling Wraiths",dmg:15,upgName:"Abyss Shriek",upgDmg:20},
+];
+
+/* cat: nail | spell | soul | survival | other */
+const CHARMS=[
+  /* ── NAIL ── */
+  {id:"fragile_strength",name:"Fragile/Unbreakable Strength",cat:"nail",n:3,orb:"⚔",oc:"#c9a84c",ob:"#3a3020",desc:"×1.5 nail damage",nm:1.5,sm:1},
+  {id:"fury_fallen",name:"Fury of the Fallen",cat:"nail",n:2,orb:"☽",oc:"#e07070",ob:"#3a1515",desc:"×1.75 nail at 1 mask (cond.)",nm:1.75,sm:1,cond:true},
+  {id:"quick_slash",name:"Quick Slash",cat:"nail",n:2,orb:"≫",oc:"#e8d5a0",ob:"#2e2810",desc:"Faster nail swing speed",nm:1,sm:1},
+  {id:"mark_of_pride",name:"Mark of Pride",cat:"nail",n:3,orb:"◈",oc:"#e8d5a0",ob:"#2e2810",desc:"+25% nail reach",nm:1,sm:1},
+  {id:"long_nail",name:"Long Nail",cat:"nail",n:2,orb:"↔",oc:"#e8d5a0",ob:"#2e2810",desc:"+15% nail reach",nm:1,sm:1},
+  {id:"nailmasters_glory",name:"Nailmaster's Glory",cat:"nail",n:2,orb:"✦",oc:"#e8d5a0",ob:"#2e2810",desc:"Faster nail arts charge",nm:1,sm:1},
+  {id:"heavy_blow",name:"Heavy Blow",cat:"nail",n:2,orb:"⬆",oc:"#e8d5a0",ob:"#2e2810",desc:"Increased enemy knockback",nm:1,sm:1},
+  {id:"steady_body",name:"Steady Body",cat:"nail",n:1,orb:"▣",oc:"#e8d5a0",ob:"#2e2810",desc:"No knockback on self",nm:1,sm:1},
+  {id:"sharp_shadow",name:"Sharp Shadow",cat:"nail",n:2,orb:"◈",oc:"#a080d0",ob:"#2a1a4a",desc:"Deal damage with shadow dash",nm:1,sm:1},
+  /* ── SPELL ── */
+  {id:"shaman_stone",name:"Shaman Stone",cat:"spell",n:3,orb:"◉",oc:"#7ab8e8",ob:"#1e3a52",desc:"×1.33 spell damage",nm:1,sm:1.33},
+  {id:"spell_twister",name:"Spell Twister",cat:"spell",n:2,orb:"↺",oc:"#7ab8e8",ob:"#1e3a52",desc:"Spells cost 2 less soul",nm:1,sm:1},
+  {id:"flukenest",name:"Flukenest",cat:"spell",n:3,orb:"✿",oc:"#7ab8e8",ob:"#1e3a52",desc:"Wraiths become fluke bomb",nm:1,sm:1},
+  {id:"defenders_crest",name:"Defender's Crest",cat:"spell",n:1,orb:"☁",oc:"#7ab8e8",ob:"#1e3a52",desc:"Dung cloud on roll/damage",nm:1,sm:1},
+  {id:"glowing_womb",name:"Glowing Womb",cat:"spell",n:2,orb:"◉",oc:"#7ab8e8",ob:"#1e3a52",desc:"Hatchling followers attack",nm:1,sm:1},
+  /* ── SOUL ── */
+  {id:"soul_catcher",name:"Soul Catcher",cat:"soul",n:2,orb:"◈",oc:"#c4aaff",ob:"#2a1a4a",desc:"+3 soul per nail hit",nm:1,sm:1},
+  {id:"soul_eater",name:"Soul Eater",cat:"soul",n:4,orb:"◈",oc:"#c4aaff",ob:"#2a1a4a",desc:"+8 soul per nail hit",nm:1,sm:1},
+  {id:"grubsong",name:"Grubsong",cat:"soul",n:1,orb:"⦿",oc:"#c4aaff",ob:"#2a1a4a",desc:"+15 soul on taking damage",nm:1,sm:1},
+  {id:"grubberflys",name:"Grubberfly's Elegy",cat:"soul",n:2,orb:"⦿",oc:"#c4aaff",ob:"#2a1a4a",desc:"Nail beams at full health",nm:1,sm:1},
+  {id:"dream_wielder",name:"Dream Wielder",cat:"soul",n:1,orb:"◈",oc:"#c4aaff",ob:"#2a1a4a",desc:"More essence / dream nail",nm:1,sm:1},
+  /* ── SURVIVAL ── */
+  {id:"stalwart_shell",name:"Stalwart Shell",cat:"survival",n:3,orb:"◎",oc:"#6ec97a",ob:"#1a3a20",desc:"Longer invincibility frames",nm:1,sm:1},
+  {id:"quick_focus",name:"Quick Focus",cat:"survival",n:3,orb:"♥",oc:"#6ec97a",ob:"#1a3a20",desc:"Faster focus heal speed",nm:1,sm:1},
+  {id:"deep_focus",name:"Deep Focus",cat:"survival",n:4,orb:"♥",oc:"#6ec97a",ob:"#1a3a20",desc:"Heal 2 masks per focus",nm:1,sm:1},
+  {id:"joni_blessing",name:"Joni's Blessing",cat:"survival",n:4,orb:"☾",oc:"#6ec97a",ob:"#1a3a20",desc:"+1 blue mask (replaces 1)",nm:1,sm:1},
+  {id:"hiveblood",name:"Hiveblood",cat:"survival",n:4,orb:"⬡",oc:"#6ec97a",ob:"#1a3a20",desc:"Self-regenerating mask",nm:1,sm:1},
+  {id:"lifeblood_heart",name:"Lifeblood Heart",cat:"survival",n:2,orb:"♡",oc:"#6ec97a",ob:"#1a3a20",desc:"+2 blue masks",nm:1,sm:1},
+  {id:"lifeblood_core",name:"Lifeblood Core",cat:"survival",n:3,orb:"♡",oc:"#6ec97a",ob:"#1a3a20",desc:"+4 blue masks",nm:1,sm:1},
+  {id:"baldur_shell",name:"Baldur Shell",cat:"survival",n:2,orb:"◎",oc:"#6ec97a",ob:"#1a3a20",desc:"Blocks 4 hits (recharges)",nm:1,sm:1},
+  {id:"fragile_heart",name:"Fragile/Unbreakable Heart",cat:"survival",n:2,orb:"♡",oc:"#e07070",ob:"#3a1515",desc:"+2 max masks",nm:1,sm:1},
+  /* ── OTHER ── */
+  {id:"wayward_compass",name:"Wayward Compass",cat:"other",n:1,orb:"◎",oc:"#8a8099",ob:"#222230",desc:"Show location on map",nm:1,sm:1},
+  {id:"gathering_swarm",name:"Gathering Swarm",cat:"other",n:1,orb:"⬟",oc:"#8a8099",ob:"#222230",desc:"Collect nearby geo",nm:1,sm:1},
+  {id:"sprintmaster",name:"Sprintmaster",cat:"other",n:1,orb:"►",oc:"#8a8099",ob:"#222230",desc:"Increased move speed",nm:1,sm:1},
+  {id:"dashmaster",name:"Dashmaster",cat:"other",n:2,orb:"»",oc:"#8a8099",ob:"#222230",desc:"Dash down + shorter cooldown",nm:1,sm:1},
+  {id:"fragile_greed",name:"Fragile/Unbreakable Greed",cat:"other",n:2,orb:"◆",oc:"#c9a84c",ob:"#3a3020",desc:"+20% geo from enemies",nm:1,sm:1},
+  {id:"weaversong",name:"Weaversong",cat:"other",n:2,orb:"∿",oc:"#8a8099",ob:"#222230",desc:"Weaverlings follow you",nm:1,sm:1},
+  {id:"dreamshield",name:"Dreamshield",cat:"other",n:3,orb:"◎",oc:"#c4aaff",ob:"#2a1a4a",desc:"Orbiting shield blocks hits",nm:1,sm:1},
+  {id:"kingsoul",name:"Kingsoul",cat:"other",n:5,orb:"◈",oc:"#c9a84c",ob:"#3a3020",desc:"+2 soul/sec passively",nm:1,sm:1},
+  {id:"void_heart",name:"Void Heart",cat:"other",n:0,orb:"◈",oc:"#6a3a9a",ob:"#1a0a2a",desc:"Replaces Kingsoul (0 notches)",nm:1,sm:1},
+  {id:"white_fragment",name:"Queen's/King's Fragment",cat:"other",n:1,orb:"◎",oc:"#8a8099",ob:"#222230",desc:"Half of Kingsoul",nm:1,sm:1},
+];
+
+const MAX=11;
+const eq=new Set();
+
+// Build boss select
+function initBosses(){
+  const sel=document.getElementById("boss-sel");
+  BOSSES.forEach((b,i)=>{const o=document.createElement("option");o.value=i;o.textContent=b.name;sel.appendChild(o);});
+  const hi=BOSSES.findIndex(b=>b.name==="Hollow Knight");
+  sel.value=hi>=0?hi:0;
+  updateHpLine();
+}
+function updateHpLine(){
+  const b=getBoss(),arr=toArr(b.hp),tot=arr.reduce((a,v)=>a+v,0);
+  document.getElementById("hp-line").textContent=arr.length>1?arr.join(" + ")+" = "+tot+" HP":tot+" HP";
+}
+function getBoss(){return BOSSES[+document.getElementById("boss-sel").value];}
+function getNail(){return +document.getElementById("nail-sel").value;}
+function toArr(hp){return Array.isArray(hp)?hp:[hp];}
+
+// Build charm grid
+function initCharms(){
+  const cats=["all","nail","spell","soul","survival","other"];
+  const cpages=document.getElementById("cpages");
+  cats.forEach(cat=>{
+    const pg=document.createElement("div");
+    pg.className="cpage"+(cat==="all"?" vis":"");
+    pg.id="pg-"+cat;
+    const list=cat==="all"?CHARMS:CHARMS.filter(c=>c.cat===cat);
+    list.forEach(c=>{
+      const d=document.createElement("div");
+      const catCls=c.cat==="nail"?" nc":c.cat==="spell"?" sc":c.cat==="survival"?" vc":c.cat==="soul"?" lc":"";
+      d.className="ci"+catCls;
+      d.dataset.id=c.id;
+      d.innerHTML=`<div class="orb" style="background:${c.ob};color:${c.oc}">${c.orb}</div><div style="flex:1;min-width:0"><div class="cn">${c.name}</div><div class="cd">${c.desc}</div></div><div class="nb">${c.n}◆</div>`;
+      d.addEventListener("click",()=>toggle(c.id));
+      pg.appendChild(d);
+    });
+    cpages.appendChild(pg);
+  });
+}
+
+function toggle(id){
+  eq.has(id)?eq.delete(id):eq.add(id);
+  document.querySelectorAll("[data-id='"+id+"']").forEach(el=>el.classList.toggle("on",eq.has(id)));
+  updateNotches();calc();
+}
+
+function switchTab(cat){
+  document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("on",t.dataset.cat===cat));
+  document.querySelectorAll(".cpage").forEach(p=>p.classList.toggle("vis",p.id==="pg-"+cat));
+}
+
+function updateNotches(){
+  let used=0;CHARMS.forEach(c=>{if(eq.has(c.id))used+=c.n;});
+  const pips=document.getElementById("npips");pips.innerHTML="";
+  for(let i=0;i<MAX;i++){const p=document.createElement("div");p.className="np"+(i<used&&used<=MAX?" used":i<used?" over":"");pips.appendChild(p);}
+  document.getElementById("nc-lbl").textContent=used+" / "+MAX;
+  const w=document.getElementById("nwarn");
+  w.innerHTML=used>MAX?`<div class="nwarn">Over notch limit — remove ${used-MAX} notch${used-MAX>1?"es":""} of charms</div>`:"";
+}
+
+function getMults(){
+  let nm=1,sm=1;
+  CHARMS.forEach(c=>{if(eq.has(c.id)){nm*=c.nm;sm*=c.sm;}});
+  return{nm,sm};
+}
+
+function calc(){
+  const nail=getNail(),boss=getBoss();
+  const{nm,sm}=getMults();
+  const nDmg=Math.floor(nail*nm);
+  const arr=toArr(boss.hp),tot=arr.reduce((a,v)=>a+v,0);
+  const nHits=Math.ceil(tot/nDmg);
+
+  document.getElementById("r-nail").textContent=nHits;
+  document.getElementById("r-nail-sub").textContent="nail hits";
+  document.getElementById("s-nail").textContent=nail;
+  document.getElementById("s-mult").textContent="×"+nm.toFixed(2);
+  document.getElementById("s-total").textContent=nDmg;
+  document.getElementById("s-hp").textContent=tot;
+
+  // Phases
+  const plbl=document.getElementById("phase-lbl"),prows=document.getElementById("prows");
+  prows.innerHTML="";
+  if(arr.length>1){
+    plbl.style.display="";
+    arr.forEach((hp,i)=>{
+      const r=document.createElement("div");r.className="pr";
+      const pn=boss.phases?boss.phases[i]:"Phase "+(i+1);
+      r.innerHTML=`<span class="prn">${pn}<span class="prh">${hp} HP</span></span><span class="prv">${Math.ceil(hp/nDmg)}</span>`;
+      prows.appendChild(r);
+    });
+    const tr=document.createElement("div");tr.className="ptot";
+    tr.innerHTML=`<span>Total (${tot} HP)</span><span>${nHits}</span>`;prows.appendChild(tr);
+  }else{plbl.style.display="none";}
+
+  // Spells
+  const hasSS=eq.has("shaman_stone");
+  const sgrid=document.getElementById("sgrid");sgrid.innerHTML="";
+  let firstSpellHits=0;
+  SPELLS.forEach((sp,si)=>{
+    [sp,{name:sp.upgName,dmg:sp.upgDmg}].forEach(v=>{
+      const d=Math.floor(v.dmg*sm),h=Math.ceil(tot/d);
+      if(si===0&&v.dmg===sp.dmg)firstSpellHits=h;
+      const b=document.createElement("div");b.className="sbox";
+      b.innerHTML=`<div class="sbox-n">${v.name}${hasSS?'<span class="ss-badge">+SS</span>':''}</div><div class="sbox-d">${d} dmg</div><div class="sbox-h">${h} hits to kill</div>`;
+      sgrid.appendChild(b);
+    });
+  });
+
+  const vsDmg=Math.floor(15*sm);
+  document.getElementById("r-spell").textContent=Math.ceil(tot/vsDmg);
+  document.getElementById("r-spell-sub").textContent="Vengeful Spirit ("+vsDmg+" dmg)";
+
+  document.getElementById("fury-el").innerHTML=eq.has("fury_fallen")?
+    `<div class="furynote">⚠ Fury of the Fallen is conditional — the ×1.75 multiplier only applies at exactly 1 mask of health remaining. The calculation above assumes Fury is always active.</div>`:"";
+}
+
+// Init
+initBosses();initCharms();initCombo();updateNotches();calc();
+document.getElementById("nail-sel").addEventListener("change",calc);
+document.getElementById("boss-sel").addEventListener("change",()=>{updateHpLine();calc();});
+document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>switchTab(t.dataset.cat)));
+
+/* ══════════════════════════════════════════
+   COMBO CALCULATOR — Spell Card System
+   ══════════════════════════════════════════ */
+
+// All spells: base and upgraded version, with relevant charms
+const COMBO_SPELLS = [
+  {
+    id: "vs",
+    icon: "✦",
+    name: "Vengeful Spirit",
+    upgName: "Shade Soul",
+    baseDmg: 15,
+    upgDmg: 20,
+    // Charms that affect this spell's damage (id must match CHARMS array)
+    relCharms: [
+      {id:"shaman_stone",  label:"Shaman Stone",   orb:"◉", mult:1.33, note:"×1.33 dmg"},
+      {id:"spell_twister", label:"Spell Twister",  orb:"↺", mult:1,    note:"-2 soul cost"},
+    ]
+  },
+  {
+    id: "dd",
+    icon: "↓",
+    name: "Desolate Dive",
+    upgName: "Descending Dark",
+    baseDmg: 15,
+    upgDmg: 20,
+    relCharms: [
+      {id:"shaman_stone",    label:"Shaman Stone",    orb:"◉", mult:1.33, note:"×1.33 dmg"},
+      {id:"spell_twister",   label:"Spell Twister",   orb:"↺", mult:1,    note:"-2 soul cost"},
+      {id:"defenders_crest", label:"Defender's Crest",orb:"☁", mult:1,    note:"Adds dung cloud"},
+    ]
+  },
+  {
+    id: "hw",
+    icon: "~",
+    name: "Howling Wraiths",
+    upgName: "Abyss Shriek",
+    baseDmg: 15,
+    upgDmg: 20,
+    relCharms: [
+      {id:"shaman_stone", label:"Shaman Stone", orb:"◉", mult:1.33, note:"×1.33 dmg"},
+      {id:"spell_twister",label:"Spell Twister",orb:"↺", mult:1,    note:"-2 soul cost"},
+      {id:"flukenest",    label:"Flukenest",    orb:"✿", mult:1,    note:"Becomes fluke bomb"},
+    ]
+  },
+];
+
+// State per spell card
+const comboState = {};
+COMBO_SPELLS.forEach(sp => {
+  comboState[sp.id] = {
+    isUpg: false,      // false = base, true = upgraded
+    count: 0,
+    charms: new Set(), // which relCharms are toggled ON for this spell
+  };
+});
+
+function initCombo() {
+  const container = document.getElementById("spell-cards");
+  COMBO_SPELLS.forEach(sp => container.appendChild(buildSpellCard(sp)));
+  document.getElementById("combo-reset-btn").addEventListener("click", resetCombo);
+}
+
+function buildSpellCard(sp) {
+  const card = document.createElement("div");
+  card.className = "spell-card";
+  card.id = "scard-" + sp.id;
+
+  // Header
+  const hdr = document.createElement("div");
+  hdr.className = "sc-header";
+  hdr.innerHTML = `<div class="sc-icon">${sp.icon}</div><div class="sc-name" id="scname-${sp.id}">${sp.name}</div><div class="sc-dmg-badge" id="scdmg-${sp.id}">— dmg</div>`;
+  card.appendChild(hdr);
+
+  // Version toggle: Base | Upgraded
+  const vt = document.createElement("div");
+  vt.className = "ver-toggle";
+  const btnBase = document.createElement("button");
+  btnBase.className = "ver-btn on"; btnBase.id = "vbtn-"+sp.id+"-base"; btnBase.textContent = sp.name;
+  const btnUpg  = document.createElement("button");
+  btnUpg.className  = "ver-btn";   btnUpg.id  = "vbtn-"+sp.id+"-upg";  btnUpg.textContent  = sp.upgName;
+  btnBase.addEventListener("click", () => setVersion(sp.id, false));
+  btnUpg.addEventListener ("click", () => setVersion(sp.id, true));
+  vt.appendChild(btnBase); vt.appendChild(btnUpg);
+  card.appendChild(vt);
+
+  // Charm toggles
+  const charmRow = document.createElement("div");
+  charmRow.className = "sc-charms";
+  charmRow.id = "sc-charms-" + sp.id;
+  sp.relCharms.forEach(ch => {
+    const btn = document.createElement("div");
+    btn.className = "scharm-btn";
+    btn.id = "scharm-"+sp.id+"-"+ch.id;
+    btn.innerHTML = `<span class="sorb">${ch.orb}</span><span>${ch.label}</span><span class="sn">${ch.note}</span>`;
+    btn.addEventListener("click", () => toggleSpellCharm(sp.id, ch.id));
+    charmRow.appendChild(btn);
+  });
+  card.appendChild(charmRow);
+
+  // Counter row
+  const cr = document.createElement("div");
+  cr.className = "sc-counter-row";
+
+  const minus = document.createElement("button");
+  minus.className = "sc-btn"; minus.textContent = "−";
+  minus.addEventListener("click", () => changeCount(sp.id, -1));
+
+  const val = document.createElement("div");
+  val.className = "sc-val"; val.id = "scval-"+sp.id; val.textContent = "0";
+
+  const plus = document.createElement("button");
+  plus.className = "sc-btn"; plus.textContent = "+";
+  plus.addEventListener("click", () => changeCount(sp.id, +1));
+
+  const info = document.createElement("div");
+  info.className = "sc-cast-info"; info.id = "scinfo-"+sp.id;
+  info.textContent = "0 total dmg";
+
+  cr.appendChild(minus); cr.appendChild(val); cr.appendChild(plus); cr.appendChild(info);
+  card.appendChild(cr);
+
+  return card;
+}
+
+function setVersion(id, isUpg) {
+  comboState[id].isUpg = isUpg;
+  const sp = COMBO_SPELLS.find(s => s.id === id);
+  document.getElementById("vbtn-"+id+"-base").classList.toggle("on", !isUpg);
+  document.getElementById("vbtn-"+id+"-upg" ).classList.toggle("on",  isUpg);
+  document.getElementById("scname-"+id).textContent = isUpg ? sp.upgName : sp.name;
+  calcCombo();
+}
+
+function toggleSpellCharm(spellId, charmId) {
+  const st = comboState[spellId];
+  st.charms.has(charmId) ? st.charms.delete(charmId) : st.charms.add(charmId);
+  document.getElementById("scharm-"+spellId+"-"+charmId).classList.toggle("on", st.charms.has(charmId));
+  calcCombo();
+}
+
+function changeCount(id, delta) {
+  comboState[id].count = Math.max(0, comboState[id].count + delta);
+  calcCombo();
+}
+
+function resetCombo() {
+  COMBO_SPELLS.forEach(sp => {
+    comboState[sp.id] = {isUpg:false, count:0, charms:new Set()};
+    document.getElementById("vbtn-"+sp.id+"-base").classList.add("on");
+    document.getElementById("vbtn-"+sp.id+"-upg" ).classList.remove("on");
+    document.getElementById("scname-"+sp.id).textContent = sp.name;
+    document.getElementById("scval-"+sp.id).textContent = "0";
+    sp.relCharms.forEach(ch => {
+      document.getElementById("scharm-"+sp.id+"-"+ch.id).classList.remove("on");
+    });
+    document.getElementById("scard-"+sp.id).classList.remove("active");
+  });
+  calcCombo();
+}
+
+function getSpellDmgEach(sp) {
+  const st = comboState[sp.id];
+  const baseDmg = st.isUpg ? sp.upgDmg : sp.baseDmg;
+  // Apply spell-specific charm multipliers (only those toggled ON for THIS spell)
+  let mult = 1;
+  sp.relCharms.forEach(ch => {
+    if (st.charms.has(ch.id) && ch.mult > 1) mult *= ch.mult;
+  });
+  return Math.floor(baseDmg * mult);
+}
+
+function calcCombo() {
+  const boss = getBoss();
+  const nDmg = Math.floor(getNail() * getMults().nm);
+  const arr = toArr(boss.hp);
+  const tot = arr.reduce((a,v) => a+v, 0);
+
+  let totalSpellDmg = 0;
+  let totalSpellCasts = 0;
+
+  COMBO_SPELLS.forEach(sp => {
+    const st = comboState[sp.id];
+    const dmgEach = getSpellDmgEach(sp);
+    const castDmg = dmgEach * st.count;
+    totalSpellDmg  += castDmg;
+    totalSpellCasts += st.count;
+
+    // Update card UI
+    document.getElementById("scdmg-"+sp.id).textContent = dmgEach + " dmg";
+    document.getElementById("scval-"+sp.id).textContent = st.count;
+    document.getElementById("scinfo-"+sp.id).innerHTML =
+      st.count > 0
+        ? `<strong>${castDmg}</strong> total dmg`
+        : "0 total dmg";
+    document.getElementById("scard-"+sp.id).classList.toggle("active", st.count > 0);
+  });
+
+  const remainingHp = Math.max(0, tot - totalSpellDmg);
+  const nailHitsNeeded = remainingHp > 0 ? Math.ceil(remainingHp / nDmg) : 0;
+  const totalActions = totalSpellCasts + nailHitsNeeded;
+  const isOverkill = totalSpellDmg >= tot && totalSpellCasts > 0;
+
+  document.getElementById("cb-spelldmg").textContent = totalSpellDmg;
+  document.getElementById("cb-spelldmg-sub").textContent =
+    totalSpellCasts > 0 ? totalSpellCasts + " spell" + (totalSpellCasts > 1 ? "s" : "") + " cast" : "no spells cast";
+  document.getElementById("cb-nailhits").textContent = nailHitsNeeded;
+  document.getElementById("cb-nailhits-sub").textContent = isOverkill ? "boss already dead!" : "after spells land";
+  document.getElementById("cb-total").textContent = totalSpellCasts === 0 ? "—" : totalActions;
+  document.getElementById("cb-total-sub").textContent =
+    totalSpellCasts === 0 ? "cast some spells above"
+    : totalSpellCasts + " spell" + (totalSpellCasts>1?"s":"") + " + " + nailHitsNeeded + " nail";
+
+  // HP bar
+  const spellPct = tot > 0 ? Math.min(100, (totalSpellDmg / tot) * 100) : 0;
+  const nailDmg  = nailHitsNeeded * nDmg;
+  const nailPct  = tot > 0 ? Math.min(100 - spellPct, (nailDmg / tot) * 100) : 0;
+  document.getElementById("cb-bar-spell").style.width = spellPct + "%";
+  document.getElementById("cb-bar-nail").style.width  = nailPct  + "%";
+  document.getElementById("cb-bar-spell-lbl").textContent = "Spell: " + totalSpellDmg + " dmg (" + spellPct.toFixed(0) + "%)";
+  document.getElementById("cb-bar-nail-lbl").textContent  = "Nail: " + nailDmg + " dmg (" + nailPct.toFixed(0) + "%)";
+
+  // Note
+  const noteEl = document.getElementById("combo-note");
+  if (totalSpellCasts === 0) {
+    noteEl.innerHTML = ""; noteEl.className = "";
+  } else if (isOverkill) {
+    noteEl.className = "combo-note overkill-note";
+    noteEl.innerHTML = "⚠ Spell damage (" + totalSpellDmg + ") already exceeds boss HP (" + tot + "). You're casting more than needed!";
+  } else {
+    noteEl.className = "combo-note";
+    noteEl.innerHTML =
+      "✦ " + totalSpellCasts + " spell" + (totalSpellCasts>1?"s":"") +
+      " deal <strong>" + totalSpellDmg + " / " + tot + " HP</strong> — finish with " +
+      "<strong>" + nailHitsNeeded + " nail hit" + (nailHitsNeeded!==1?"s":"") + "</strong>" +
+      " for <strong>" + totalActions + " total actions</strong>.";
+  }
+}
+
+// Keep calcCombo in sync when charms / boss / nail change
+const _origCalc = calc;
+calc = function() { _origCalc(); calcCombo(); };
+
+/* ── PAGE NAVIGATION ── */
+function showPage(id) {
+  // Hide all boss pages
+  document.querySelectorAll('.boss-page').forEach(p => p.classList.remove('open'));
+  // Toggle app visibility
+  const app = document.querySelector('.app');
+  if (id === 'home') {
+    app.style.display = '';
+  } else {
+    app.style.display = 'none';
+    const page = document.getElementById('page-' + id);
+    if (page) page.classList.add('open');
+  }
+  // Update nav active state
+  document.querySelectorAll('.tnav-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.page === id);
+  });
+  window.scrollTo(0, 0);
+}
+
+function switchMantisTab(tab) {
+  document.getElementById('mc-mantis').style.display  = tab === 'mantis'  ? '' : 'none';
+  document.getElementById('mc-traitor').style.display = tab === 'traitor' ? '' : 'none';
+  document.getElementById('mtab-mantis').classList.toggle('on',  tab === 'mantis');
+  document.getElementById('mtab-traitor').classList.toggle('on', tab === 'traitor');
+}
+
+</script>
+</body>
+</html>

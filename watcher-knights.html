@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Watcher Knights Damage Calculator</title>
+<meta name="description" content="Calculate hits needed for Watcher Knights in Hollow Knight. Best builds and strategies.">
+<meta name="keywords" content="watcher knights hollow knight, watcher knights damage calculator">
+<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+<nav class="topnav">
+  <a class="tnav-btn" href="index.html"><span class="ticon">⚔</span> Calculator</a>
+  <a class="tnav-btn" href="radiance-calculator.html"   ><span class="ticon">☀</span> Radiance</a>
+  <a class="tnav-btn" href="grimm-calculator.html"   ><span class="ticon">🔥</span> Grimm</a>
+  <a class="tnav-btn" href="pure-vessel.html"     ><span class="ticon">◈</span> Pure Vessel</a>
+  <a class="tnav-btn" href="watcher-knights.html"          ><span class="ticon">◎</span> Watcher Knights</a>
+  <a class="tnav-btn" href="mantis.html"           ><span class="ticon">⚡</span> Mantis / Traitor</a>
+</nav>
+
+<div class="d" id="page-watcher">
+<div class="bp-inner">
+  <div class="bp-hero" style="background:linear-gradient(135deg,#0d0d1a 0%,#080810 50%,#050508 100%);">
+    <div class="bp-hero-content">
+      <button class="bp-back" onclick="showPage('home')">← Back to Calculator</button>
+      <div class="bp-tag" style="color:#9b9bcc;">✦ MULTI-ENEMY BOSS · CITY OF TEARS</div>
+      <div class="bp-name" style="color:#b8b8ee;text-shadow:0 0 40px rgba(120,120,220,.4);">Watcher Knights</div>
+      <div class="bp-lore">"Six guardians of the Watcher's Spire, each one a perfect soldier. They fall and rise and fight in unison — silence the last one to end it."</div>
+    </div>
+  </div>
+
+  <div class="bp-stats">
+    <div class="bpstat"><div class="bpstat-l">HP Each</div><div class="bpstat-v" style="color:var(--danger)">250</div></div>
+    <div class="bpstat"><div class="bpstat-l">Count</div><div class="bpstat-v" style="color:var(--gold)">6</div></div>
+    <div class="bpstat"><div class="bpstat-l">Total HP</div><div class="bpstat-v" style="color:var(--danger)">1500</div></div>
+    <div class="bpstat"><div class="bpstat-l">Difficulty</div><div class="bpstat-v" style="color:#b8b8ee">★★★☆☆</div></div>
+  </div>
+
+  <div class="bp-cols">
+    <div class="bp-card">
+      <div class="bp-card-title">⚔ Attacks</div>
+      <div class="atk-list">
+        <div class="atk-item">
+          <div class="atk-name">Rolling Attack</div>
+          <div class="atk-desc">Curls into a ball and rolls across the arena at speed. Can bounce off walls.</div>
+          <span class="atk-dmg">2 masks</span><span class="atk-tip">Jump over with good timing</span>
+        </div>
+        <div class="atk-item">
+          <div class="atk-name">Leaping Slam</div>
+          <div class="atk-desc">Leaps into the air and crashes down toward the player with its nail raised.</div>
+          <span class="atk-dmg">2 masks</span><span class="atk-tip">Dash sideways as it descends</span>
+        </div>
+        <div class="atk-item">
+          <div class="atk-name">Nail Swipe</div>
+          <div class="atk-desc">A quick horizontal nail slash when in close range. Low windup.</div>
+          <span class="atk-dmg">2 masks</span><span class="atk-tip">Keep distance or dash through</span>
+        </div>
+        <div class="atk-item">
+          <div class="atk-name">Multi-Knight Chaos</div>
+          <div class="atk-desc">Multiple knights active at once all attacking simultaneously — the true danger.</div>
+          <span class="atk-dmg">2 masks</span><span class="atk-tip">Focus one, stay mobile</span>
+        </div>
+      </div>
+    </div>
+    <div class="bp-card">
+      <div class="bp-card-title">💡 Strategy & Tips</div>
+      <div class="tips-list">
+        <div class="tip-item"><div class="tip-num">1</div><div class="tip-text"><strong>Kill them one at a time.</strong> Focus all damage on one knight — never split hits between two.</div></div>
+        <div class="tip-item"><div class="tip-num">2</div><div class="tip-text">They spawn 2 at a time (2 → 2 → 2). When a pair is down, you get a brief reset window before the next two.</div></div>
+        <div class="tip-item"><div class="tip-num">3</div><div class="tip-text"><strong>Pogo on rolling knights</strong> — bouncing off them while they roll deals damage safely and keeps you airborne.</div></div>
+        <div class="tip-item"><div class="tip-num">4</div><div class="tip-text"><strong>Descending Dark</strong> is exceptional here — AoE damage hits multiple knights when they cluster.</div></div>
+        <div class="tip-item"><div class="tip-num">5</div><div class="tip-text">The <strong>arena is large</strong> — use vertical space. Watcher Knights are bad at tracking aerial movement.</div></div>
+        <div class="tip-item"><div class="tip-num">6</div><div class="tip-text"><strong>Baldur Shell</strong> is useful — the 4 free block charges absorb the unexpected hits you get when outnumbered.</div></div>
+      </div>
+    </div>
+    <div class="bp-card bp-full">
+      <div class="bp-card-title">◎ Spawn Order</div>
+      <table class="phase-table">
+        <tr><th>Wave</th><th>Knights Active</th><th>Strategy</th></tr>
+        <tr><td>Wave 1</td><td>Knights 1 & 2</td><td>Learn their individual patterns. Practice killing one cleanly.</td></tr>
+        <tr><td>Wave 2</td><td>Knights 3 & 4</td><td>More aggressive — they coordinate attacks. Maintain distance.</td></tr>
+        <tr><td>Wave 3</td><td>Knights 5 & 6</td><td>Final pair. If you reach here with HP, you've won. Push hard.</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
+<h1>Watcher Knights Damage Calculator</h1>
+
+<p>
+Watcher Knights are a multi-enemy boss fight in 
+:contentReference[oaicite:3]{index=3}.
+</p>
+
+<h2>Boss Health</h2>
+<p>Total HP across all knights: <strong>1200</strong></p>
+
+<h2>Tips</h2>
+<p>
+Use spells to deal damage to multiple enemies quickly.
+Crowd control is key in this fight.
+</p>
+</body>
+</html>

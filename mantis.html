@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mantis Lords Damage Calculator</title>
+<meta name="description" content="Calculate hits needed for Mantis Lords in Hollow Knight. Best builds and strategies.">
+<meta name="keywords" content="mantis lords hollow knight, mantis lords damage calculator">
+<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+<nav class="topnav">
+  <a class="tnav-btn" href="index.html"><span class="ticon">⚔</span> Calculator</a>
+  <a class="tnav-btn" href="radiance-calculator.html"   ><span class="ticon">☀</span> Radiance</a>
+  <a class="tnav-btn" href="grimm-calculator.html"   ><span class="ticon">🔥</span> Grimm</a>
+  <a class="tnav-btn" href="pure-vessel.html"     ><span class="ticon">◈</span> Pure Vessel</a>
+  <a class="tnav-btn" href="watcher-knights.html"          ><span class="ticon">◎</span> Watcher Knights</a>
+  <a class="tnav-btn" href="mantis.html"           ><span class="ticon">⚡</span> Mantis / Traitor</a>
+</nav>
+
+<div class="s-page" id="page-mantis">
+<div class="bp-inner">
+  <div class="bp-hero" style="background:linear-gradient(135deg,#0a1a0a 0%,#061006 50%,#030803 100%);">
+    <div class="bp-hero-content">
+      <div class="bp-tag" style="color:var(--green);">✦ MANTIS VILLAGE · QUEEN'S GARDENS</div>
+      <div class="bp-name" style="color:#a0e8a0;text-shadow:0 0 40px rgba(110,201,122,.4);">Mantis Lords & Traitor Lord</div>
+      <div class="bp-lore">"Three noble sisters, warriors of the Mantis tribe — proud, precise, and merciless. The Traitor Lord betrayed his own kin and now fights in fury."</div>
+    </div>
+  </div>
+
+  <!-- Tab toggle for Mantis vs Traitor -->
+  <div style="display:flex;gap:8px;margin-bottom:1.2rem;">
+    <button id="mtab-mantis" class="tab on" style="font-size:.72rem;padding:7px 20px;" onclick="switchMantisTab('mantis')">⚡ Mantis Lords</button>
+    <button id="mtab-traitor" class="tab" style="font-size:.72rem;padding:7px 20px;" onclick="switchMantisTab('traitor')">🗡 Traitor Lord</button>
+  </div>
+
+  <!-- MANTIS LORDS content -->
+  <div id="mc-mantis">
+    <div class="bp-stats">
+      <div class="bpstat"><div class="bpstat-l">HP Each</div><div class="bpstat-v" style="color:var(--danger)">250</div></div>
+      <div class="bpstat"><div class="bpstat-l">Lords</div><div class="bpstat-v" style="color:var(--gold)">3</div></div>
+      <div class="bpstat"><div class="bpstat-l">Total HP</div><div class="bpstat-v" style="color:var(--danger)">750</div></div>
+      <div class="bpstat"><div class="bpstat-l">Difficulty</div><div class="bpstat-v" style="color:#a0e8a0">★★★☆☆</div></div>
+    </div>
+    <div class="bp-cols">
+      <div class="bp-card">
+        <div class="bp-card-title">⚔ Attacks</div>
+        <div class="atk-list">
+          <div class="atk-item">
+            <div class="atk-name">Sickle Throw</div>
+            <div class="atk-desc">Throws a boomerang sickle that travels horizontally and returns. Very common.</div>
+            <span class="atk-dmg">2 masks</span><span class="atk-tip">Jump over both passes</span>
+          </div>
+          <div class="atk-item">
+            <div class="atk-name">Dive Kick</div>
+            <div class="atk-desc">Leaps up and kicks diagonally downward at high speed toward the player.</div>
+            <span class="atk-dmg">2 masks</span><span class="atk-tip">Dash under them as they kick</span>
+          </div>
+          <div class="atk-item">
+            <div class="atk-name">Dash Slash</div>
+            <div class="atk-desc">Dashes across the floor with a quick nail slash. Short range, low recovery.</div>
+            <span class="atk-dmg">2 masks</span><span class="atk-tip">Jump over or dash through</span>
+          </div>
+          <div class="atk-item">
+            <div class="atk-name">Triple Sickle (Phase 3)</div>
+            <div class="atk-desc">All three lords throw sickles simultaneously from different positions.</div>
+            <span class="atk-dmg">2 masks</span><span class="atk-tip">Find the vertical gap, stay there</span>
+          </div>
+        </div>
+      </div>
+      <div class="bp-card">
+        <div class="bp-card-title">💡 Mantis Lords Tips</div>
+        <div class="tips-list">
+          <div class="tip-item"><div class="tip-num">1</div><div class="tip-text">Phase 1 (1 lord) is a tutorial. Learn the sickle timing before Phase 3 arrives.</div></div>
+          <div class="tip-item"><div class="tip-num">2</div><div class="tip-text">The <strong>sickle boomerangs twice</strong> — jump once when thrown, again when it returns.</div></div>
+          <div class="tip-item"><div class="tip-num">3</div><div class="tip-text">Phase 3 (all 3 lords): focus the <strong>center lord</strong> first to reduce sickle density.</div></div>
+          <div class="tip-item"><div class="tip-num">4</div><div class="tip-text"><strong>Descending Dark</strong> can hit all 3 lords if they're close — spike the middle when clustered.</div></div>
+          <div class="tip-item"><div class="tip-num">5</div><div class="tip-text">Beat them fairly to earn the <strong>Mantis village shortcut</strong> — extremely useful for exploration.</div></div>
+        </div>
+      </div>
+      <div class="bp-card bp-full">
+        <div class="bp-card-title">⚡ Phase Breakdown</div>
+        <table class="phase-table">
+          <tr><th>Phase</th><th>Lords</th><th>HP</th><th>Notes</th></tr>
+          <tr><td>Phase 1</td><td>Lord 1 alone</td><td class="hp-td">250</td><td>1v1, learn sickle rhythm here</td></tr>
+          <tr><td>Phase 2</td><td>Lords 1 & 2</td><td class="hp-td">250 each</td><td>Synchronized attacks — prioritize the damaged one</td></tr>
+          <tr><td>Phase 3</td><td>All 3 Lords</td><td class="hp-td">250 each</td><td>Triple sickles, chaos — vertical positioning is key</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRAITOR LORD content -->
+  <div id="mc-traitor" style="display:none;">
+    <div class="bp-stats">
+      <div class="bpstat"><div class="bpstat-l">Total HP</div><div class="bpstat-v" style="color:var(--danger)">900</div></div>
+      <div class="bpstat"><div class="bpstat-l">Phases</div><div class="bpstat-v" style="color:var(--gold)">1</div></div>
+      <div class="bpstat"><div class="bpstat-l">Location</div><div class="bpstat-v" style="color:var(--text-muted);font-size:.85rem">Queen's Gardens</div></div>
+      <div class="bpstat"><div class="bpstat-l">Difficulty</div><div class="bpstat-v" style="color:#a0e8a0">★★★★☆</div></div>
+    </div>
+    <div class="bp-cols">
+      <div class="bp-card">
+        <div class="bp-card-title">⚔ Attacks</div>
+        <div class="atk-list">
+          <div class="atk-item">
+            <div class="atk-name">Infected Sickle</div>
+            <div class="atk-desc">Like Mantis Lords' sickle but coated in orange infection — more erratic trajectory.</div>
+            <span class="atk-dmg">2 masks</span><span class="atk-tip">Jump higher — trajectory curves</span>
+          </div>
+          <div class="atk-item">
+            <div class="atk-name">Dive Slash Combo</div>
+            <div class="atk-desc">Dives with a slash then immediately follows with a ground dash slash. Two-part.</div>
+            <span class="atk-dmg">2 masks each</span><span class="atk-tip">Dash both times, stay mobile</span>
+          </div>
+          <div class="atk-item">
+            <div class="atk-name">Infection Burst</div>
+            <div class="atk-desc">Slams the ground to create orange infection pools that linger on the floor.</div>
+            <span class="atk-dmg">2 masks</span><span class="atk-tip">Avoid infection pools — use walls</span>
+          </div>
+          <div class="atk-item">
+            <div class="atk-name">Rage Mode</div>
+            <div class="atk-desc">Below ~50% HP he becomes faster and attacks more aggressively with less recovery.</div>
+            <span class="atk-dmg">2 masks</span><span class="atk-tip">Burst him — don't let him linger</span>
+          </div>
+        </div>
+      </div>
+      <div class="bp-card">
+        <div class="bp-card-title">💡 Traitor Lord Tips</div>
+        <div class="tips-list">
+          <div class="tip-item"><div class="tip-num">1</div><div class="tip-text">The <strong>Mantis Claw</strong> wall-jump ability is nearly required — the arena has no floor-safe zones in rage mode.</div></div>
+          <div class="tip-item"><div class="tip-num">2</div><div class="tip-text">His sickle curves more than Mantis Lords' — <strong>jump earlier and higher</strong>.</div></div>
+          <div class="tip-item"><div class="tip-num">3</div><div class="tip-text">The infection pools shrink the arena significantly. <strong>Kill him fast</strong> before you run out of space.</div></div>
+          <div class="tip-item"><div class="tip-num">4</div><div class="tip-text"><strong>Fragile Strength + Quick Slash</strong> lets you burst him in his recovery windows before rage mode starts.</div></div>
+          <div class="tip-item"><div class="tip-num">5</div><div class="tip-text">Equip <strong>Isma's Tear</strong> — it lets you move through infection without taking damage, changing the fight completely.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<h1>Watcher Knights Damage Calculator</h1>
+
+<p>
+Watcher Knights are a multi-enemy boss fight in 
+:contentReference[oaicite:3]{index=3}.
+</p>
+
+<h2>Boss Health</h2>
+<p>Total HP across all knights: <strong>1200</strong></p>
+
+<h2>Tips</h2>
+<p>
+Use spells to deal damage to multiple enemies quickly.
+Crowd control is key in this fight.
+</p>
+</body>
+</html>
